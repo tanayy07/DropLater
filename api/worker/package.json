@@ -1,0 +1,31 @@
+{
+  "name": "worker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js",
+    "test": "node ./node_modules/jest/bin/jest.js --runInBand",
+    "seed": "node scripts/seed.js",
+    "format": "prettier -w \"**/*.{js,ts,tsx,json}\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "bullmq": "^5.58.0",
+    "dotenv": "^17.2.1",
+    "ioredis": "^5.7.0",
+    "mongoose": "^8.17.1",
+    "node-fetch": "^2.7.0",
+    "pino": "^9.9.0"
+  }
+  ,
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0",
+    "express": "^5.1.0",
+    "prettier": "^3.3.3"
+  }
+}
