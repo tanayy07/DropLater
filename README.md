@@ -3,7 +3,8 @@
 How to run with Docker Compose
 - docker compose up -d
 - API: http://localhost:3001 (GET /health)
-- Admin: http://localhost:5173
+- Admin (served by API if built): http://localhost:3001
+- Dev Admin via Vite: http://localhost:5173
 - Sink: http://localhost:4000/sink
 
 Environment variables
@@ -33,6 +34,17 @@ curl -X POST -H "Authorization: Bearer changeme" "http://localhost:3001/api/note
 Tests
 - Unit: `worker/lib/idempotency` key generation
 - Integration (lightweight): schema + idempotency key and mock sink path
+
+Dev scripts (root)
+- Start infra: `npm run dev:compose`
+- Stop infra: `npm run down`
+- API dev: `npm run dev:api`
+- Worker dev: `npm run dev:worker`
+- Sink dev: `npm run dev:sink`
+- Admin dev: `npm run dev:admin`
+- Tests: `npm test`
+- Format worker: `npm run format`
+- Seed example: `npm run seed`
 
 Scripts
 - API/Worker/Sink are dockerized. Admin runs via compose dev service.

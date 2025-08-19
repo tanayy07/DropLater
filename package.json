@@ -1,0 +1,24 @@
+{
+  "name": "droplater-root",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev:compose": "docker compose up -d",
+    "down": "docker compose down",
+    "dev:api": "npm --prefix api run dev",
+    "dev:worker": "npm --prefix api run worker",
+    "dev:sink": "npm --prefix api run sink",
+    "dev:admin": "npm --prefix admin run dev",
+    "test": "npm --prefix api/worker test",
+    "format": "npm --prefix api/worker run format",
+    "seed": "npm --prefix api run worker:seed",
+    "strip-comments": "node tools/strip-comments.js"
+  },
+  "devDependencies": {
+    "@babel/generator": "^7.25.6",
+    "@babel/parser": "^7.25.6"
+  }
+}
+
+
