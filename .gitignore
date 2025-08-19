@@ -1,0 +1,19 @@
+node_modules/
+**/node_modules/
+
+# Admin build outputs
+admin/dist/
+admin/.vite/
+
+# TypeScript build info
+*.tsbuildinfo
+
+# OS/files
+.DS_Store
+Thumbs.db
+
+# Logs
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
